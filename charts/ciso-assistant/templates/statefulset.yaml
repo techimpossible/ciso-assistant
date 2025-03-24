@@ -20,6 +20,8 @@ spec:
         app: ciso-assistant
         client: {{ .Values.clientName }}
     spec:
+      securityContext:
+        runAsNonRoot: true
       containers:
       - name: ciso-assistant-backend
         env:
